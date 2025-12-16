@@ -49,7 +49,7 @@
         <div class="top-bar">
             <div class="page-title">
                 <h2 id="page-title-text">Vista General</h2>
-                <p id="page-subtitle-text">Performance Metrics & KPIs</p>
+                <p id="page-subtitle-text">Metricas de Performance</p>
             </div>
             <div style="display: flex; align-items: center; gap: 20px;">
                 <div class="quarter-selector" id="quarter-selector">
@@ -79,19 +79,19 @@
                 </div>
                 <div class="stat-card">
                     <div>
-                        <div class="stat-title">Tiempo Trabajado</div>
+                        <div class="stat-title">Completados</div>
+                        <div class="stat-value" id="kpi-done">0</div>
+                        <div class="stat-sub">Entregados por UX-Ops</div>
+                    </div>
+                    <div class="stat-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--success);"><i data-lucide="check-circle-2"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="stat-title">Tiempo Dedicado</div>
                         <div class="stat-value" id="kpi-hours">0 h</div>
                         <div class="stat-sub" id="kpi-avg">~0 h/proy</div>
                     </div>
                     <div class="stat-icon" style="background: rgba(0, 169, 224, 0.2); color: var(--brand-blue);"><i data-lucide="clock"></i></div>
-                </div>
-                <div class="stat-card">
-                    <div>
-                        <div class="stat-title">Completados</div>
-                        <div class="stat-value" id="kpi-done">0</div>
-                        <div class="stat-sub">Tasa de éxito</div>
-                    </div>
-                    <div class="stat-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--success);"><i data-lucide="check-circle-2"></i></div>
                 </div>
                 <div class="stat-card">
                     <div>
@@ -119,7 +119,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="accent-bar" style="background-color: #a855f7;"></div>
-                            <div class="card-title">Naturaleza</div>
+                            <div class="card-title">Scope/Tipo de Proyecto</div>
                         </div>
                         <div style="height: 200px; position: relative; display: flex; justify-content: center;">
                             <canvas id="donutChart"></canvas>
@@ -128,7 +128,7 @@
                     <div class="card" id="radar-container">
                         <div class="card-header">
                             <div class="accent-bar" style="background-color: var(--brand-blue);"></div>
-                            <div class="card-title">Comparativa (Normalizada)</div>
+                            <div class="card-title">Comparativa [Normalizada]</div>
                         </div>
                         <div style="height: 300px; position: relative; display: flex; justify-content: center;"> <!-- Increased height for radar -->
                             <canvas id="radarChart"></canvas>
@@ -167,4 +167,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

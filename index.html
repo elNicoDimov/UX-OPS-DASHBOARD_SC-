@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX-OPS DASH 2025</title>
+    <!-- External Libraries (CDNs) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <img src="FenixLogo.png" alt="Fenix Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">UX-OPS <span style="color: var(--brand-red);">DASH</span></div>
+            </div>
+            <button onclick="toggleSidebar()" style="background:none; border:none; color:var(--text-muted); cursor:pointer;">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <nav style="padding: 16px; overflow-y: auto;">
+            <!-- ID added for JS selection -->
+            <button class="nav-btn active-main" id="btn-general" onclick="switchTab('Vista General')">
+                <i data-lucide="layout-dashboard"></i>
+                <span class="nav-label">Vista General</span>
+            </button>
+
+            <div class="sidebar-section-title">Equipos</div>
+            <div id="team-nav-container">
+                <!-- Team buttons injected by JS -->
+            </div>
+
+            <div class="sidebar-section-title">Data</div>
+            <button class="nav-btn" onclick="switchTab('Base de Datos')" id="btn-db">
+                <i data-lucide="database"></i>
+                <span class="nav-label">Base de Datos</span>
+            </button>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="page-title">
+                <h2 id="page-title-text">Vista General</h2>
+                <p id="page-subtitle-text">Performance Metrics & KPIs</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div class="quarter-selector" id="quarter-selector">
+                    <button class="q-btn active" onclick="setQuarter('All')">All</button>
+                    <button class="q-btn" onclick="setQuarter('Q1')">Q1</button>
+                    <button class="q-btn" onclick="setQuarter('Q2')">Q2</button>
+                    <button class="q-btn" onclick="setQuarter('Q3')">Q3</button>
+                    <button class="q-btn" onclick="setQuarter('Q4')">Q4</button>
+                </div>
+                <div style="border-left: 1px solid var(--border); padding-left: 20px;">
+                    <span style="font-size: 10px; color: #64748b; font-weight: 700; display: block; text-transform: uppercase;">Año Fiscal</span>
+                    <span style="font-size: 18px; font-weight: 800; color: var(--brand-red);">2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid" id="dashboard-view">
+            <!-- KPIs -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div>
+                        <div class="stat-title">Total Proyectos</div>
+                        <div class="stat-value" id="kpi-total">0</div>
+                        <div class="stat-sub">En periodo seleccionado</div>
+                    </div>
+                    <div class="stat-icon" style="background: rgba(250, 0, 80, 0.2); color: var(--brand-red);"><i data-lucide="briefcase"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="stat-title">Tiempo Trabajado</div>
+                        <div class="stat-value" id="kpi-hours">0 h</div>
+                        <div class="stat-sub" id="kpi-avg">~0 h/proy</div>
+                    </div>
+                    <div class="stat-icon" style="background: rgba(0, 169, 224, 0.2); color: var(--brand-blue);"><i data-lucide="clock"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="stat-title">Completados</div>
+                        <div class="stat-value" id="kpi-done">0</div>
+                        <div class="stat-sub">Tasa de éxito</div>
+                    </div>
+                    <div class="stat-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--success);"><i data-lucide="check-circle-2"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="stat-title">En Progreso</div>
+                        <div class="stat-value" id="kpi-wip">0</div>
+                        <div class="stat-sub">Bloqueados / Todo</div>
+                    </div>
+                    <div class="stat-icon" style="background: rgba(255, 212, 0, 0.2); color: var(--brand-yellow);"><i data-lucide="circle-dashed"></i></div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-grid">
+                <div class="card span-2">
+                    <div class="card-header">
+                        <div class="accent-bar"></div>
+                        <div class="card-title" id="chart-main-title">Estado por Equipo</div>
+                    </div>
+                    <div style="height: 400px; position: relative;"> <!-- Increased height for horizontal layout -->
+                        <canvas id="mainChart"></canvas>
+                    </div>
+                </div>
+                
+                <div style="display: flex; flexDirection: column; gap: 24px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="accent-bar" style="background-color: #a855f7;"></div>
+                            <div class="card-title">Naturaleza</div>
+                        </div>
+                        <div style="height: 200px; position: relative; display: flex; justify-content: center;">
+                            <canvas id="donutChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card" id="radar-container">
+                        <div class="card-header">
+                            <div class="accent-bar" style="background-color: var(--brand-blue);"></div>
+                            <div class="card-title">Comparativa (Normalizada)</div>
+                        </div>
+                        <div style="height: 300px; position: relative; display: flex; justify-content: center;"> <!-- Increased height for radar -->
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid hidden" id="db-view">
+            <div class="card">
+                <div class="card-header">
+                    <div class="accent-bar" style="background-color: var(--brand-blue);"></div>
+                    <div class="card-title">Registro de Proyectos</div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table id="db-table">
+                        <thead>
+                            <tr>
+                                <th>Proyecto</th>
+                                <th>Equipo</th>
+                                <th>Quarter</th>
+                                <th>Estado</th>
+                                <th>Tipo</th>
+                                <th>Tiempo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

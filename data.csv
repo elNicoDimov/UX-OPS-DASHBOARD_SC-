@@ -1,0 +1,65 @@
+TEAM,NAME,DURATION,STATUS,DATE,TYPE
+Martechs & Ads,[Mejora] Nuevo caso de uso en Priority Message,4 days,Done,07/Mar/25,Mejora
+Martechs & Ads,[Mejora] Service Info,2 days,Done,17/Mar/25,Mejora
+Martechs & Ads,[Mejora] High Value Actions,4 days,Done,31/Mar/25,Mejora
+Martechs & Ads,[Mejora] Banner Autoplay,1 week,Done,24/abr/25,Mejora
+Martechs & Ads,[Mejora] Shoppable Banner,2 weeks,Done,02/Jun/25,Mejora
+Martechs & Ads,[Mejora] Box Progress,1 day,Done,03/Jul/25,Mejora
+Martechs & Ads,[Ajuste] Incentive Message S,1 day,Done,31/Jul/25,Mejora
+Martechs & Ads,[Ajuste] Box Progress Indicator,1 day,Done,31/Jul/25,Mejora
+Martechs & Ads,[Mejora] Tag M & S [Exclusive Deals],4 days,Done,31/Jul/25,Mejora
+Martechs & Ads,[Affordability] HO & Componentización,8 weeks,Done,22/ago/25,Mejora
+Martechs & Ads,[Mejora] Product Card S,3 days,Done,06/Oct/25,Mejora
+Onboarding,[Mejora] Search Placeholder Dinámico,2 weeks,Done,23/abr/25,Mejora
+Onboarding,[Mejora] Home Hero Autoplay,1 week,Done,24/abr/25,Mejora
+Onboarding,[Mejora] Banner Autoplay,1 week,Done,24/abr/25,Mejora
+Onboarding,[Mejora] Home Hero,3 weeks,Done,21/May/25,Mejora
+Onboarding,[Mejora] Home Hero Agregar Prop Boolena CTA,1 day,Done,17/Jun/25,Mejora
+Plus & Pricing,[Mejora] Rebrand & FOMO Plus,1 week,Done,12/Feb/25,Mejora
+Plus & Pricing,[Mejora] Pricing en componentes (Sin Impuestos),4 days,Done,25/Mar/25,Mejora
+Plus & Pricing,[Ajuste] Banner Subscription; ajustar tamaño,4 hours,Done,31/Mar/25,Mejora
+Plus & Pricing,[Mejora] Incentive Display,3 days,Done,14/abr/25,Mejora
+Plus & Pricing,[Mejora] Order Row,2 days,Done,03/Jul/25,Mejora
+Plus & Pricing,[Mejora] Row Interactive M,0 hours,Todo,17/Jul/25,Mejora
+Plus & Pricing,[Mejora] Plus (Segmented Control & Display),1 day,Done,11/ago/25,Mejora
+Plus & Pricing,[Affordability] HO & Componentización,8 weeks,Done,22/ago/25,Mejora
+Plus & Pricing,[Assessment] Plus Home Auditoria,1 week,Done,22/Sep/25,Mejora
+Plus & Pricing,[Mejora] Footer (Transición Individual Tag),2 weeks,WIP,01/dic/25,Mejora
+Fulfillment,[Mejora] Order Progress Bar,3 days,Done,21/Mar/25,Mejora
+Fulfillment,[Mejora] Order: cambio de Tag por Highlight,4 days,Done,31/Mar/25,Mejora
+Fulfillment,[Ajuste] Order Card,1 week,Done,10/Jul/25,Mejora
+Fulfillment,[Mejora] Componente compensaciones,2 days,Done,21/Jul/25,Mejora
+Fulfillment,[Mejora] Live Activity (Iteraciones en PIN),1 day,Done,28/Jul/25,Mejora
+Fulfillment,[TBD] Wizard Page,1 day,Done,28/Jul/25,Mejora
+Fulfillment,[Ajuste] Order Card & Live Activity,1 day,Done,08/Sep/25,Mejora
+Quick Commerce,[Mejora] Chip S & M (Tag),1 week,Done,12/Feb/25,Mejora
+Quick Commerce,[Nuevo] Colecciones M,3 weeks,Done,21/Mar/25,Nuevo
+Quick Commerce,[Nuevo] Iniciativa Variants (QC),2 weeks,Done,21/Mar/25,Nuevo
+Quick Commerce,[Mejora] Chip S (Tag)-Impacto en Librería,1 week,Done,21/Mar/25,Mejora
+Quick Commerce,[Mejora] Pricing en componentes,4 days,Done,25/Mar/25,Mejora
+Quick Commerce,[Mejora] Chip M (Tag) Impacto en Libreria,1 week,Done,28/Mar/25,Mejora
+Quick Commerce,[Nuevo] Colecciones L,3 weeks,Done,14/abr/25,Nuevo
+Quick Commerce,[Mejora] Product Entry,2 weeks,Done,05/May/25,Mejora
+Quick Commerce,[Mejora] DoubleYa,2 weeks,Done,21/May/25,Mejora
+Quick Commerce,[Ajuste] Header Product Detail,3 days,Done,29/May/25,Mejora
+Quick Commerce,[Mejora] Chip Filter S,4 days,Done,18/Jun/25,Mejora
+Quick Commerce,[Mejora] Row Informative L (DoubleYa),2 days,Done,18/Jun/25,Mejora
+Quick Commerce,[Mejora] Story Page (UFF),2 days,Done,21/Jul/25,Mejora
+Quick Commerce,[Ajuste] Product Header,1 day,Done,23/Jul/25,Mejora
+Quick Commerce,[Mejora] Story Card (UFF),2 days,Done,28/Jul/25,Mejora
+Quick Commerce,[Ajuste] Product Description Pricing,1 day,Done,05/ago/25,Mejora
+Quick Commerce,[Mejora] Home Entry Point,4 days,Done,02/Sep/25,Mejora
+Quick Commerce,[Mejora] Story Page,3 days,Done,15/Sep/25,Mejora
+Quick Commerce,[Mejora] Box Message XS-S y M,2 days,Done,03/Oct/25,Mejora
+Quick Commerce,[Mejora] Product Card S & M-QC Nuevos,1 week,Done,13/Oct/25,Mejora
+Payments,[Mejora] Incentive Row Voucher S,2 days,Done,03/Jun/25,Mejora
+Payments,[Mejora] Row Informative M (Affordability),1 day,Done,12/ago/25,Mejora
+Payments,[Ajuste] Box Interactive,3 days,Done,08/Sep/25,Mejora
+Food,[Mejora] Pricing en componentes,4 days,Done,25/Mar/25,Mejora
+Food,[Mejora] Reviews (More Reviews),0 days,Todo,21/Jul/25,Mejora
+Food,[Mejora] Story Card (Autoplay),2 days,Done,21/Jul/25,Mejora
+Food,[Ajuste] Rating,2 days,Done,22/ago/25,Mejora
+Food,[Mejora] Review Card L,2 days,Done,08/Sep/25,Mejora
+Food,[Nuevo] Review Row L,1 day,Done,03/Oct/25,Nuevo
+Food,[Nuevo] Review Row L & Review User Info,3 days,Done,03/Oct/25,Nuevo
+Food,[TBD] Highlight Socios,0 days,Todo,06/Oct/25,Mejora
